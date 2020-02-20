@@ -1,20 +1,20 @@
 const endpoints = {
     cart: {
-        url: 'http://localhost:4000/cart'
+        url: 'https://ta-back.herokuapp.com/cart'
     },
     orders: {
-        url: 'http://localhost:4000/orders'
+        url: 'https://ta-back.herokuapp.com/orders'
     },
     login: {
-        url: 'http://localhost:4000/login'
+        url: 'https://ta-back.herokuapp.com/login'
     },
     products: {
-        url: 'http://localhost:4000/products'
+        url: 'https://ta-back.herokuapp.com/products'
     },
     groups: {
-        url: 'http://localhost:4000/groups'
+        url: 'https://ta-back.herokuapp.com/groups'
     },
     users: {
-        url: 'http://localhost:4000/users'
+        url: 'https://ta-back.herokuapp.com/users'
     }
 };
