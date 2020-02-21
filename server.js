@@ -47,7 +47,7 @@ app.get('/admin-users', function (req, res) {
     res.sendFile('/views/admin-users.html', { root : __dirname});
 });
 
-var server = app.listen(process.env.PORT || 3000, 'localhost', function() {
+var server = app.listen(process.env.PORT || 3000, '0.0.0.0', function() {
     var host = process.env.HOST;
     var port = process.env.PORT;
 
