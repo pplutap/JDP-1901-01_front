@@ -48,8 +48,8 @@ app.get('/admin-users', function (req, res) {
 });
 
 var server = app.listen(process.env.PORT || 3000, 'localhost', function() {
-    var host = server.address().address;
-    var port = server.address().port;
+    var host = process.env.HOST;
+    var port = process.env.PORT;
 
     console.log('Aplikacja nasłuchuje na http://' + host + ':' + port);
 });
