@@ -52,4 +52,5 @@ var server = app.listen(process.env.PORT || 3000, '0.0.0.0', function() {
     var port = process.env.PORT;
 
     console.log('Aplikacja nasłuchuje na http://' + host + ':' + port);
+
 });
