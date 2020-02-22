@@ -2,6 +2,7 @@ var express = require('express');
 var cors = require('cors');
 var app = express();
 app.use(cors());
+app.options('*', cors());
 app.use(express.static(__dirname));
 
 // app.use(function (req, res, next) {
@@ -29,47 +30,47 @@ app.all('/*', function(req, res, next) {
     next();
 });
 
-app.get('/', cors(), function (req, res) {
+app.get('/', function (req, res) {
     res.sendFile('/index.html', { root : __dirname});
 });
 
-app.get('/login', cors(), function (req, res) {
+app.get('/login', function (req, res) {
     res.sendFile('/views/login.html', { root : __dirname});
 });
 
-app.get('/cart', cors(), function (req, res) {
+app.get('/cart', function (req, res) {
     res.sendFile('/views/cart.html', { root : __dirname});
 });
 
-app.get('/category', cors(), function (req, res) {
+app.get('/category', function (req, res) {
     res.sendFile('/views/category.html', { root : __dirname});
 });
 
-app.get('/category/:tagId', cors(), function (req, res) {
+app.get('/category/:tagId', function (req, res) {
     res.sendFile('/views/category.html', { root : __dirname});
 });
 
-app.get('/product', cors(), function (req, res) {
+app.get('/product', function (req, res) {
     res.sendFile('/views/product.html', { root : __dirname});
 });
 
-app.get('/product/:tagId', cors(), function (req, res) {
+app.get('/product/:tagId', function (req, res) {
     res.sendFile('/views/product.html', { root : __dirname});
 });
 
-app.get('/admin-orders', cors(), function (req, res) {
+app.get('/admin-orders', function (req, res) {
     res.sendFile('/views/admin-orders.html', { root : __dirname});
 });
 
-app.get('/admin-products-group', cors(), function (req, res) {
+app.get('/admin-products-group', function (req, res) {
     res.sendFile('/views/admin-products-group.html', { root : __dirname});
 });
 
-app.get('/admin-products', cors(), function (req, res) {
+app.get('/admin-products', function (req, res) {
     res.sendFile('/views/admin-products.html', { root : __dirname});
 });
 
-app.get('/admin-users', cors(), function (req, res) {
+app.get('/admin-users', function (req, res) {
     res.sendFile('/views/admin-users.html', { root : __dirname});
 });
 
