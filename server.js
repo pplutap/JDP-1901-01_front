@@ -23,6 +23,12 @@ app.use(express.static(__dirname));
 //     next();
 // });
 
+app.all('/*', function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    next();
+});
+
 app.get('/', cors(), function (req, res) {
     res.sendFile('/index.html', { root : __dirname});
 });
