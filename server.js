@@ -2,7 +2,6 @@ var express = require('express');
 var cors = require('cors');
 var app = express();
 app.use(cors());
-app.options('*', cors());
 app.use(express.static(__dirname));
 
 // app.use(function (req, res, next) {
